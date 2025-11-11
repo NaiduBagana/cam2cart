@@ -6,7 +6,7 @@ export default function Cam2Cart() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const BACKEND_URL = "http://localhost:3123/api/orders";
+  const BACKEND_URL = "https://cam2cart-backend.onrender.com/api/orders";
 
   useEffect(() => {
     fetchOrderData();
