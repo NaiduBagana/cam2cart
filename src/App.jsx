@@ -61,23 +61,27 @@ export default function Cam2Cart() {
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-800 to-amber-500 py-10 px-4 flex justify-center items-center text-gray-100">
       <div className="max-w-5xl w-full bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-10 space-y-8 animate-fadeIn">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-white/20 pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-white/20 pb-6 space-y-4 sm:space-y-0">
+          {/* Title */}
           <div className="flex items-center space-x-3">
             <div className="bg-amber-400 p-3 rounded-2xl shadow-md">
               <ShoppingCart className="w-7 h-7 text-purple-900" />
             </div>
-            <h1 className="text-4xl font-extrabold tracking-tight text-amber-300 drop-shadow">
+            <h1 className="text-4xl font-extrabold tracking-tight text-amber-300 drop-shadow text-center sm:text-left">
               cam2cart
             </h1>
           </div>
 
-          <button
-            onClick={fetchOrderData}
-            className="flex items-center gap-2 px-5 py-2.5 bg-amber-400 text-purple-900 font-semibold rounded-xl hover:bg-amber-300 active:scale-95 transition-transform shadow-lg"
-          >
-            <RefreshCw className="w-4 h-4 ml-1" />
-            <span >Refresh</span>
-          </button>
+          {/* Refresh Button */}
+          <div className="flex justify-center sm:justify-end w-full sm:w-auto">
+            <button
+              onClick={fetchOrderData}
+              className="flex items-center gap-3 px-5 py-2.5 bg-amber-400 text-purple-900 font-semibold rounded-xl hover:bg-amber-300 active:scale-95 transition-transform shadow-lg"
+            >
+              <RefreshCw className="w-4 h-4 ml-1" />
+              <span>Refresh</span>
+            </button>
+          </div>
         </div>
 
         {error && (
