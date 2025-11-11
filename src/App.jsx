@@ -75,8 +75,8 @@ export default function Cam2Cart() {
             onClick={fetchOrderData}
             className="flex items-center gap-2 px-5 py-2.5 bg-amber-400 text-purple-900 font-semibold rounded-xl hover:bg-amber-300 active:scale-95 transition-transform shadow-lg"
           >
-            <RefreshCw className="w-4 h-4" />
-            <span>Refresh</span>
+            <RefreshCw className="w-4 h-4 ml-1" />
+            <span >Refresh</span>
           </button>
         </div>
 
